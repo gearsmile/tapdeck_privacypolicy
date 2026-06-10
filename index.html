@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy / プライバシーポリシー – TapDeck</title>
+  <meta name="description" content="TapDeck privacy policy. TapDeck does not collect, store, or transmit any personal data." />
+  <style>
+    :root {
+      --bg: #0a0f1a;
+      --surface: #111827;
+      --border: #1e2a3a;
+      --accent: #00e5ff;
+      --accent-muted: rgba(0, 229, 255, 0.12);
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    /* ── Lang switcher ── */
+    .lang-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,15,26,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
+    }
+    .lang-bar .brand {
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: var(--accent);
+      font-size: 14px;
+    }
+    .lang-btns { display: flex; gap: 8px; }
+    .lang-btn {
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 13px;
+      transition: all .2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background: var(--accent-muted);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Sections ── */
+    .section { display: none; }
+    .section.active { display: block; }
+
+    /* ── Typography ── */
+    h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: .5px;
+      margin-bottom: 6px;
+      background: linear-gradient(120deg, var(--accent), #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: .5px;
+      margin: 36px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    p { margin-bottom: 12px; color: var(--text-muted); }
+    ul { list-style: none; padding-left: 0; margin-bottom: 12px; }
+    ul li {
+      padding: 4px 0 4px 20px;
+      position: relative;
+      color: var(--text-muted);
+    }
+    ul li::before {
+      content: '›';
+      position: absolute;
+      left: 4px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--accent-muted);
+      border: 1px solid rgba(0,229,255,.25);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin: 24px 0;
+      color: var(--text);
+      font-size: 14px;
+    }
+    .highlight strong { color: var(--accent); }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-top: 36px;
+    }
+    .contact-card a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 12px;
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <span class="brand">TAP DECK</span>
+  <div class="lang-btns">
+    <button class="lang-btn active" onclick="setLang('ja')" id="btn-ja">🇯🇵 日本語</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">🇺🇸 English</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     JAPANESE
+════════════════════════════════════════ -->
+<div class="container">
+<div id="section-ja" class="section active">
+
+  <h1>プライバシーポリシー</h1>
+  <p class="subtitle">TapDeck &nbsp;|&nbsp; 最終更新日：2025年6月</p>
+
+  <div class="highlight">
+    <strong>要約：</strong> TapDeck はお客様の個人情報を収集・送信・販売しません。すべての設定データはお使いのデバイス上にのみ保存されます。
+  </div>
+
+  <h2>1. はじめに</h2>
+  <p>
+    本プライバシーポリシーは、junkmecha（以下「開発者」）が提供する Windows デスクトップアプリケーション「TapDeck」（以下「本アプリ」）における情報の取り扱いについて説明するものです。
+    本アプリをご利用になる場合は、本ポリシーをお読みください。
+  </p>
+
+  <h2>2. 収集する情報</h2>
+  <p>本アプリは以下の情報を収集しません。</p>
+  <ul>
+    <li>氏名・メールアドレス等の個人を特定できる情報</li>
+    <li>位置情報</li>
+    <li>使用状況の統計・分析データ（テレメトリ）</li>
+    <li>クラッシュレポート</li>
+    <li>支払い情報（決済は Microsoft Store が管理します）</li>
+  </ul>
+
+  <h2>3. ローカルに保存されるデータ</h2>
+  <p>
+    本アプリは、ボタンのラベル・アイコン・アクション設定などの構成情報を、お使いの PC 上のアプリケーションストレージ（Windows の <code>SharedPreferences</code> 相当領域）に保存します。
+    これらのデータは開発者に送信されることはなく、お使いのデバイスの外部に出ることはありません。
+  </p>
+
+  <h2>4. インターネット接続について</h2>
+  <p>
+    本アプリは、ボタンに設定された URL を開く場合や、登録されたアプリケーションを起動する場合にのみ、お使いの OS 標準の仕組みを通じてネットワークを利用します。
+    開発者のサーバーとの通信は一切行いません。
+  </p>
+  <p>
+    ウェブサイト URL をボタンに登録した場合、クリック時に規定のブラウザが開きます。その先のウェブサイトのプライバシーポリシーは各サイトに準じます。
+  </p>
+
+  <h2>5. 第三者への情報提供</h2>
+  <p>
+    開発者はいかなる第三者に対しても、お客様の情報を販売・貸出・開示しません。本アプリ内に広告は含まれていません。
+  </p>
+
+  <h2>6. Microsoft Store について</h2>
+  <p>
+    本アプリを Microsoft Store 経由でご購入いただいた場合、決済・返金・ライセンス管理は Microsoft が担当します。
+    Microsoft のプライバシーポリシーについては、<a href="https://privacy.microsoft.com/" target="_blank" rel="noopener" style="color:var(--accent)">Microsoft プライバシーに関する声明</a>をご覧ください。
+  </p>
+
+  <h2>7. 未成年者のプライバシー</h2>
+  <p>
+    本アプリは 13 歳未満の方を対象としておらず、意図的に当該年齢層の情報を収集することはありません。
+  </p>
+
+  <h2>8. ポリシーの変更</h2>
+  <p>
+    本ポリシーは予告なく変更される場合があります。重大な変更がある場合は、本ページの「最終更新日」を更新します。
+    定期的に本ページをご確認いただくことをお勧めします。
+  </p>
+
+  <h2>9. お問い合わせ</h2>
+  <div class="contact-card">
+    <p style="margin-bottom:8px;">本ポリシーに関するご質問は、以下までお問い合わせください。</p>
+    <p style="margin-bottom:4px;"><strong>開発者：</strong> junkmecha</p>
+    <p><strong>GitHub：</strong> <a href="https://github.com/junkmecha" target="_blank" rel="noopener">github.com/junkmecha</a></p>
+  </div>
+
+  <footer>
+    &copy; 2025 junkmecha. All rights reserved. &nbsp;|&nbsp;
+    <a href="#" onclick="setLang('en'); return false;" style="color:var(--accent); text-decoration:none;">View in English</a>
+  </footer>
+
+</div><!-- /section-ja -->
+
+<!-- ════════════════════════════════════════
+     ENGLISH
+════════════════════════════════════════ -->
+<div id="section-en" class="section">
+
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">TapDeck &nbsp;|&nbsp; Last updated: June 2025</p>
+
+  <div class="highlight">
+    <strong>Summary:</strong> TapDeck does not collect, transmit, or sell your personal information. All configuration data is stored exclusively on your device.
+  </div>
+
+  <h2>1. Overview</h2>
+  <p>
+    This Privacy Policy describes how junkmecha ("Developer") handles information in connection with the Windows desktop application TapDeck ("the App"). By using the App, you agree to the practices described in this policy.
+  </p>
+
+  <h2>2. Information We Do Not Collect</h2>
+  <p>The App does not collect any of the following:</p>
+  <ul>
+    <li>Personally identifiable information (name, email address, etc.)</li>
+    <li>Location data</li>
+    <li>Usage statistics or telemetry</li>
+    <li>Crash reports</li>
+    <li>Payment information (handled exclusively by Microsoft Store)</li>
+  </ul>
+
+  <h2>3. Locally Stored Data</h2>
+  <p>
+    The App saves your button configuration — including labels, icons, and actions — to local application storage on your PC (Windows application data storage). This data never leaves your device and is not transmitted to the Developer or any third party.
+  </p>
+
+  <h2>4. Internet Access</h2>
+  <p>
+    The App accesses the internet only when you activate a button configured to open a URL or launch an application, using standard OS mechanisms. No communication with Developer servers occurs.
+  </p>
+  <p>
+    If you configure a button with a website URL, clicking it will open that URL in your default browser. The privacy practices of those external sites are governed by their own policies.
+  </p>
+
+  <h2>5. Third-Party Disclosure</h2>
+  <p>
+    The Developer does not sell, trade, or otherwise transfer your information to any third party. The App contains no advertisements.
+  </p>
+
+  <h2>6. Microsoft Store</h2>
+  <p>
+    If you purchase the App through the Microsoft Store, all payment processing, licensing, and refunds are managed by Microsoft. For details, please refer to the <a href="https://privacy.microsoft.com/" target="_blank" rel="noopener" style="color:var(--accent)">Microsoft Privacy Statement</a>.
+  </p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>
+    The App is not directed at children under the age of 13. We do not knowingly collect information from children under 13.
+  </p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>
+    This Privacy Policy may be updated from time to time. Any significant changes will be reflected by updating the "Last updated" date at the top of this page. We encourage you to review this page periodically.
+  </p>
+
+  <h2>9. Contact</h2>
+  <div class="contact-card">
+    <p style="margin-bottom:8px;">If you have any questions about this Privacy Policy, please contact us:</p>
+    <p style="margin-bottom:4px;"><strong>Developer:</strong> junkmecha</p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/junkmecha" target="_blank" rel="noopener">github.com/junkmecha</a></p>
+  </div>
+
+  <footer>
+    &copy; 2025 junkmecha. All rights reserved. &nbsp;|&nbsp;
+    <a href="#" onclick="setLang('ja'); return false;" style="color:var(--accent); text-decoration:none;">日本語で表示</a>
+  </footer>
+
+</div><!-- /section-en -->
+</div><!-- /container -->
+
+<script>
+  function setLang(lang) {
+    document.getElementById('section-ja').classList.toggle('active', lang === 'ja');
+    document.getElementById('section-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+    localStorage.setItem('td_lang', lang);
+  }
+
+  // Restore previous selection or detect browser language
+  const saved = localStorage.getItem('td_lang');
+  const browser = navigator.language?.startsWith('ja') ? 'ja' : 'en';
+  setLang(saved || browser);
+</script>
+</body>
+</html>
